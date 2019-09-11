@@ -7,7 +7,9 @@ File: postgres-configmap.yaml
 
 #To Create Postgres config maps resource: {Instead of ConfigMap You may use k8s secret too}
 > kubectl create -f postgres-configmap.yaml
+
 > kubectl get configmap
+
 
 Define the Azure Disk Storage Class:
 Kubernetes can dynamically provision Azure Disks using the Azure Kubernetes integration, which was configured when UCP was installed. For Kubernetes to determine which APIs to use when provisioning storage, you must create Kubernetes Storage Classes specific to each storage backend. 
@@ -22,6 +24,7 @@ To determine which Storage Classes have been provisioned:
 Create an Azure Disk with a Persistent Volume Claim :
 After you create a Storage Class, you can use Kubernetes Objects to dynamically provision Azure Disks. This is done using Kubernetes Persistent Volumes Claims. 
 > kubectl create -f azure-disk-pvc.yaml
+
 > kubectl get pvc
 
 At this point, you should see a new Persistent Volume Claim and Persistent Volume inside of Kubernetes. You should also see a new Azure Disk created in the Azure Portal.
