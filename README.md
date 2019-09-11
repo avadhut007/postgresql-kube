@@ -23,6 +23,7 @@ Create an Azure Disk with a Persistent Volume Claim :
 After you create a Storage Class, you can use Kubernetes Objects to dynamically provision Azure Disks. This is done using Kubernetes Persistent Volumes Claims. 
 > kubectl create -f azure-disk-pvc.yaml
 > kubectl get pvc
+
 At this point, you should see a new Persistent Volume Claim and Persistent Volume inside of Kubernetes. You should also see a new Azure Disk created in the Azure Portal.
 
 PostgreSQL Deployment
