@@ -1,4 +1,4 @@
-# postgresql-kube
+# postgresql-deployment-kube-aks
 
 Config Maps for PostgreSQL Configurations
 We will be using config maps for storing PostgreSQL related information. Here, we are using the database, user and password in the config map which will be used by the PostgreSQL pod in the deployment template.
